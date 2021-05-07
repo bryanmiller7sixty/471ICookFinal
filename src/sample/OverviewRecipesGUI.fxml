@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="638.0" prefWidth="533.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OverviewRecipesGUIController">
+   <children>
+      <ListView fx:id="listView" layoutX="145.0" onMouseClicked="#selectRecipe" prefHeight="638.0" prefWidth="388.0" />
+      <Button layoutX="5.0" layoutY="8.0" mnemonicParsing="false" onAction="#goBack" prefHeight="24.0" prefWidth="78.0" style="-fx-background-color: #24a0ed;" text="🢀 Back" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

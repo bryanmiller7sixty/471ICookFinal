@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="p1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="517.0" style="-fx-background-color: #333333; -fx-opacity: .9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainMenuGUIController">
+
+    <children>
+        <Accordion layoutY="-2.0" prefHeight="280.0" prefWidth="519.0">
+            <panes>
+                <TitledPane alignment="BASELINE_LEFT" animated="false" prefHeight="159.0" prefWidth="519.0" text="Protein" textFill="#070606">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="179.0" prefWidth="525.0">
+                            <children>
+                                <FlowPane fx:id="proteinFlowPane" layoutX="18.6" layoutY="16.0" prefHeight="148.0" prefWidth="486.0" vgap="20.0" AnchorPane.leftAnchor="9.0">
+                                    <children>
+                                        <RadioButton fx:id="beef" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Beef" />
+                                        <RadioButton fx:id="steak" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Steak" />
+                                        <RadioButton fx:id="shrimp" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Shrimp" />
+                                        <RadioButton fx:id="chicken" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Chicken" />
+                                        <RadioButton fx:id="tofu" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="112.0" prefWidth="112.0" text="Tofu" />
+                                        <RadioButton fx:id="salmon" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="17.0" prefWidth="112.0" text="Salmon" />
+                                        <RadioButton fx:id="crab" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="17.0" prefWidth="112.0" text="Crab" />
+                                        <RadioButton fx:id="lobster" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="17.0" prefWidth="112.0" text="Lobster" />
+                                    </children>
+                                </FlowPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+                </TitledPane>
+                <TitledPane alignment="BASELINE_LEFT" animated="false" text="Fruits-Vegetables">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <FlowPane fx:id="vegFlowPane" layoutX="26.0" layoutY="3.0" prefHeight="145.0" prefWidth="466.0">
+                                    <children>
+                                        <RadioButton fx:id="broccli" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Broccli" />
+                                        <RadioButton fx:id="corn" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Corn" />
+                                        <RadioButton fx:id="garlic" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Garlic" />
+                                        <RadioButton fx:id="red_pepper" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Red Pepper" />
+                                        <RadioButton fx:id="limes" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Limes" />
+                                        <RadioButton fx:id="cucumbers" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Cucumbers" />
+                                        <RadioButton fx:id="potato" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Potato" />
+                                        <RadioButton fx:id="onion" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Onion" />
+                                        <RadioButton fx:id="lettuce" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Lettuce" />
+                                        <RadioButton fx:id="lemon" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Lemon" />
+                                        <RadioButton fx:id="avocados" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Avocado" />
+                                        <RadioButton fx:id="olives" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Olives" />
+                              <RadioButton fx:id="spinach" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Spinach" />
+                              <RadioButton fx:id="cilantro" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Cilantro" />
+                              <RadioButton fx:id="tomatoes" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Tomatoes" />
+                              <RadioButton fx:id="bean_sprouts" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="40.0" prefWidth="112.0" text="Bean sprouts" />
+                                    </children>
+                                </FlowPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+                </TitledPane>
+                <TitledPane alignment="BASELINE_LEFT" animated="false" prefHeight="125.0" prefWidth="371.0" text="Carbs">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="367.0">
+                            <children>
+                                <FlowPane fx:id="carbsFlowPane" layoutX="16.0" layoutY="14.0" prefHeight="144.0" prefWidth="486.0">
+                                    <children>
+                                        <RadioButton fx:id="spaghetti" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Pasta" />
+                                        <RadioButton fx:id="couscous" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Couscous" />
+                                        <RadioButton fx:id="rice" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Rice" />
+                                        <RadioButton fx:id="pinto_beans" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Pinto Beans" />
+                                        <RadioButton fx:id="quinoa" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="112.0" prefWidth="112.0" text="Quinoa" />
+                                        <RadioButton fx:id="black_beans" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Black Beans" />
+                                        <RadioButton fx:id="tortillas" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Tortillas" />
+                              <RadioButton fx:id="chickpeas" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Chickpeas" />
+                              <RadioButton fx:id="pad_thai_noodles" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="18.0" prefWidth="139.0" text="Pad Thai Noodle" />
+                                    </children>
+                                </FlowPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+                </TitledPane>
+                <TitledPane alignment="BASELINE_LEFT" animated="false" contentDisplay="CENTER" prefHeight="205.0" prefWidth="525.0" text="Sauce-Other">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="367.0">
+                            <children>
+                                <AnchorPane layoutX="17.0" layoutY="14.0" minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="482.0">
+                                    <children>
+                                        <FlowPane fx:id="saucesFlowPane" layoutX="-2.0" layoutY="-2.0" prefHeight="150.0" prefWidth="487.0">
+                                            <children>
+                                                <RadioButton fx:id="teriyaki" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="25.0" prefWidth="112.0" text="Teriyaki">
+                                       <effect>
+                                          <Glow />
+                                       </effect></RadioButton>
+                                                <RadioButton fx:id="curry" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="25.0" prefWidth="112.0" text="Curry">
+                                       <effect>
+                                          <Glow />
+                                       </effect></RadioButton>
+                                                <RadioButton fx:id="alfredo" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="25.0" prefWidth="112.0" text="Alfredo">
+                                       <effect>
+                                          <Glow />
+                                       </effect></RadioButton>
+                                                <RadioButton fx:id="tomato" mnemonicParsing="false" onAction="#updateIngredients" prefHeight="25.0" prefWidth="112.0" text="Tomato">
+                                       <effect>
+                                          <Glow />
+                                       </effect></RadioButton>
+                                                <RadioButton fx:id="olive_oil" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Olive oil">
+                                       <effect>
+                                          <Glow />
+                                       </effect></RadioButton>
+                                                <RadioButton fx:id="vinegar" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Vinegar">
+                                       <effect>
+                                          <Glow />
+                                       </effect></RadioButton>
+                                                <RadioButton fx:id="cheese" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Cheese">
+                                       <effect>
+                                          <Glow />
+                                       </effect></RadioButton>
+                                    <RadioButton fx:id="enchilada" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Echilada">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="curry_powder" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Curry powder">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="coconut_milk" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Coconut milk">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="tamarind_paste" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Tamarind Paste">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="chili" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Chili ">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="sesame_oil" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Sesame oil">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="peanuts" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Peanuts">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="sugar" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Sugar">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="sugar1" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Sugar">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="tomato_paste" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Tomato Paste">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="vodka" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Vodka">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="heavy_cream" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Heavy cream">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                    <RadioButton fx:id="butter" minHeight="25.0" mnemonicParsing="false" onAction="#updateIngredients" prefWidth="112.0" text="Butter">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </RadioButton>
+                                            </children>
+                                        </FlowPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+                </TitledPane>
+            </panes>
+        </Accordion>
+        <Pane layoutX="371.0" layoutY="3.0" prefHeight="500.0" prefWidth="0.0" />
+        <HBox layoutX="1.0" layoutY="318.0" prefHeight="203.0" prefWidth="519.0">
+            <children>
+                <ListView fx:id="pro" prefHeight="203.0" prefWidth="135.0">
+               <effect>
+                  <SepiaTone />
+               </effect></ListView>
+                <ListView fx:id="veg" prefHeight="203.0" prefWidth="129.0">
+               <effect>
+                  <SepiaTone />
+               </effect></ListView>
+                <ListView fx:id="carbs" prefHeight="203.0" prefWidth="124.0">
+               <effect>
+                  <SepiaTone />
+               </effect></ListView>
+                <ListView fx:id="sauces" prefHeight="203.0" prefWidth="129.0">
+               <effect>
+                  <SepiaTone />
+               </effect></ListView>
+            </children>
+        </HBox>
+        <TextField alignment="CENTER" layoutX="1.0" layoutY="278.0" prefHeight="40.0" prefWidth="135.0" text="Protein">
+            <font>
+                <Font name="Verdana Bold Italic" size="13.0" />
+            </font>
+            <effect>
+                <Glow level="0.05" />
+            </effect>
+        </TextField>
+        <TextField alignment="CENTER" layoutX="135.0" layoutY="278.0" prefHeight="40.0" prefWidth="131.0" text="Fruits-Vegetables">
+            <font>
+                <Font name="Verdana Bold Italic" size="11.0" />
+            </font>
+            <effect>
+                <Glow level="0.05" />
+            </effect>
+        </TextField>
+        <TextField alignment="CENTER" layoutX="264.0" layoutY="278.0" prefHeight="40.0" prefWidth="131.0" text="Carbs">
+            <font>
+                <Font name="Verdana Bold Italic" size="13.0" />
+            </font>
+            <effect>
+                <Glow level="0.05" />
+            </effect>
+        </TextField>
+        <TextField alignment="CENTER" layoutX="389.0" layoutY="278.0" prefHeight="40.0" prefWidth="129.0" text="Sauces &amp; Other">
+            <font>
+                <Font name="Verdana Bold Italic" size="13.0" />
+            </font>
+            <effect>
+                <Glow level="0.05" />
+            </effect>
+        </TextField>
+      <Button layoutX="14.0" layoutY="550.0" mnemonicParsing="false" onAction="#goBack" prefHeight="24.0" prefWidth="78.0" style="-fx-background-color: #24a0ed;" text="🢀 Back" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="221.0" layoutY="550.0" mnemonicParsing="false" onAction="#clearTable2" style="-fx-background-color: #ff6666;" text="❌ Clear " textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="408.0" layoutY="550.0" mnemonicParsing="false" onAction="#loadSecond" prefHeight="28.0" prefWidth="95.0" style="-fx-background-color: #24a0ed;" text=" ✅ Done" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Button>
+    </children>
+</Pane>

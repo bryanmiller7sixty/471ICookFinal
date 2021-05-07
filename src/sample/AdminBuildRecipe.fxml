@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="599.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminBuildRecipeController">
+   <children>
+      <TabPane layoutX="-6.0" prefHeight="599.0" prefWidth="525.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Title + Author">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="511.0">
+                     <children>
+                        <TextField fx:id="recipeTitle" layoutX="14.0" layoutY="108.0" prefHeight="25.0" prefWidth="175.0" promptText="Add recipe title" />
+                        <TextField fx:id="author" layoutX="215.0" layoutY="108.0" prefHeight="25.0" prefWidth="175.0" promptText="Add author" />
+                        <Button layoutX="444.0" layoutY="108.0" mnemonicParsing="false" onAction="#addRAToFlow" style="-fx-background-color: #24a0ed; -fx-background-radius: 5em;" text="Add (+)" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="titleArea" layoutX="130.0" layoutY="216.0" prefHeight="25.0" prefWidth="345.0" />
+                        <TextArea fx:id="authorArea" layoutX="130.0" layoutY="284.0" prefHeight="25.0" prefWidth="345.0" />
+                        <Text layoutX="33.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="41.13671875">
+                           <font>
+                              <Font name="Cambria" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="33.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" wrappingWidth="58.13671875">
+                           <font>
+                              <Font name="Cambria" size="17.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="27.0" layoutY="531.0" mnemonicParsing="false" onAction="#restoreProgress" text="Restore Progress" />
+                        <Button layoutX="28.0" layoutY="497.0" mnemonicParsing="false" onAction="#saveProgress" prefHeight="25.0" prefWidth="105.0" text="Save Progress" />
+                        <Button layoutX="444.0" layoutY="14.0" mnemonicParsing="false" onAction="#signOut" style="-fx-background-color: #24a0ed; -fx-background-radius: 5em;" text="Sign out" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add ingredients">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="Protein" layoutX="23.0" layoutY="45.0" mnemonicParsing="false" text="Protein" />
+                        <CheckBox fx:id="Fruits_veg" layoutX="126.0" layoutY="47.0" mnemonicParsing="false" text="Fruits-Veg" />
+                        <CheckBox fx:id="Carbs" layoutX="249.0" layoutY="47.0" mnemonicParsing="false" text="Carbs" />
+                        <CheckBox fx:id="Sauce_other" layoutX="351.0" layoutY="45.0" mnemonicParsing="false" text="Sauce-other" />
+                        <TextField fx:id="quant" layoutX="26.0" layoutY="112.0" promptText="Quantity" />
+                        <TextField fx:id="ingName" layoutX="226.0" layoutY="112.0" promptText="Ingredient name" />
+                        <Button layoutX="426.0" layoutY="112.0" mnemonicParsing="false" onAction="#addToIngFlow" style="-fx-background-color: #24a0ed; -fx-background-radius: 5em;" text="Add (+)" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="ingredientListView" layoutX="16.0" layoutY="185.0" prefHeight="339.0" prefWidth="501.0" />
+                        <MenuButton fx:id="commandIngredient" layoutX="435.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Undo">
+                          <items>
+                          </items>
+                        </MenuButton>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Add recipe steps">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="525.0">
+                     <children>
+                        <TextField fx:id="directions" layoutX="15.0" layoutY="52.0" prefHeight="52.0" prefWidth="502.0" promptText="Add directions here" />
+                        <Button layoutX="231.0" layoutY="119.0" mnemonicParsing="false" onAction="#addToDirectionView" style="-fx-background-color: #24a0ed; -fx-background-radius: 5em;" text="Add (+)" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="directionView" layoutX="45.0" layoutY="157.0" prefHeight="291.0" prefWidth="435.0" />
+                        <Button layoutX="397.0" layoutY="470.0" mnemonicParsing="false" onAction="#addToDB" style="-fx-background-color: #24a0ed; -fx-background-radius: 5em;" text="Submit" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <MenuButton fx:id="commandDirection" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" text="Undo">
+                          <items>
+                          </items>
+                        </MenuButton>
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

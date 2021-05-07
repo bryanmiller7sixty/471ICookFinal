@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="624.0" prefWidth="517.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AfterLoginGUIController">
+   <children>
+      <Pane layoutY="1.0" prefHeight="122.0" prefWidth="517.0" style="-fx-background-color: white;" />
+      <GridPane layoutX="10.0" layoutY="142.0" prefHeight="144.0" prefWidth="497.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fx:id="aboutICook" fitHeight="152.0" fitWidth="498.0" onMouseClicked="#goToAboutICook" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="290.0" prefHeight="152.0" prefWidth="497.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fx:id="enterIngredients" fitHeight="149.0" fitWidth="498.0" onMouseClicked="#goToEnterIngredients" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="441.0" prefHeight="144.0" prefWidth="497.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fx:id="viewPantry" fitHeight="149.0" fitWidth="498.0" onMouseClicked="#goToViewPantry" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+      <Button layoutX="409.0" layoutY="20.0" mnemonicParsing="false" onAction="#signOut" prefHeight="19.0" prefWidth="96.0" style="-fx-background-color: #24a0ed;" text="Sign Out" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font></Button>
+      <GridPane layoutX="132.0" layoutY="6.0" prefHeight="108.0" prefWidth="266.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="menuLogo" fitHeight="119.0" fitWidth="315.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
